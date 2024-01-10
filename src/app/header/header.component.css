@@ -1,0 +1,18 @@
+nav{
+   background-color: darkorchid; 
+
+}
+
+nav img{
+   width: 80px; 
+}
+
+nav ul{
+    float: right;
+list-style-type: none;
+}
+
+ul li{
+    display: inline-block;
+    padding: 10px;
+}
