@@ -14,5 +14,5 @@ url=environment.url;
     loginDetails(data:any){
       return this.http.post(this.url+'userlogin', data);
     }
-  
+   
 }

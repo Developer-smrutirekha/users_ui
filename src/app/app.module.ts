@@ -8,15 +8,19 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 // import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AdminModule } from './admin/admin.module';
-import { StudentModule } from './student/student.module';
+import { StudentsModule } from './students/students.module';
 import { TeacherModule } from './teacher/teacher.module';
 import { LoginModule } from './login/login.module';
-import { SidebarComponent } from './sidebar/sidebar.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
+
+
+ 
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     FormsModule,
     HttpClientModule,
     AdminModule,
-    StudentModule,
+    StudentsModule,
     TeacherModule,
     LoginModule
 

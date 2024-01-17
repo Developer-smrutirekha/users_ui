@@ -39,21 +39,45 @@ export class LoginComponent {
       console.log(result)
 
       if (result.status == 1) {
-console.log('hii');
+        console.log('hii');
 
         if (result.data[0].utype_id == 1) {
-          console.log('hiiiiii');
-          
+
+          let admininobj = {
+            utype_id: result.data[0].utype_id,
+            usname: result.data[0].usname,
+            password: result.data[0].password,
+          }
+          localStorage.setItem('adminsession', JSON.stringify(admininobj));
+
           this.router.navigateByUrl('/admin/dashboard')
-        } else if (result.data[0].utype_id== 2) {
+
+        } else if (result.data[0].utype_id == 2) {
+
+          let studentinobj = {
+            utype_id: result.data[0].utype_id,
+            usname: result.data[0].usname,
+            password: result.data[0].password,
+
+          }
+
+          localStorage.setItem('studentsession', JSON.stringify(studentinobj));
           this.router.navigateByUrl('/student/dashboard')
         }
         else {
+
+          let teacherinobj = {
+            utype_id: result.data[0].utype_id,
+            usname: result.data[0].usname,
+            password: result.data[0].password,
+          }
+          localStorage.setItem('teachersession', JSON.stringify(teacherinobj));
           this.router.navigateByUrl('/teacher/dashboard')
+
         }
-      }else{
-      alert('Invalid username or password')
-        
+      } else {
+        alert('Invalid username or password')
+
       }
     })
 
